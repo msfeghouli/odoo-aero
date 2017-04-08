@@ -1,5 +1,10 @@
 FROM odoo:9.0
 
-RUN apt-get update && apt-get install git
+USER root
+
+RUN apt-get update
+RUN apt-get install -y git
 RUN pip install simplejson
-RUN git clone https://github.com/aeroo/aeroolib && cd aeroolib && python setup setup.py install
+RUN git clone https://github.com/aeroo/aeroolib /var/aeroolib
+WORKDIR /var/aeroolib
+RUN python setup.py install
