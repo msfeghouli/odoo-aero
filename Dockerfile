@@ -1,5 +1,6 @@
 FROM odoo:8
 
+USER root
 
 RUN echo 'Rock n Roll'
 # install dep
