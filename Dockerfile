@@ -13,3 +13,4 @@ RUN git clone https://github.com/aeroo/aeroolib.git /opt/aeroo/aeroolib
 RUN git clone https://github.com/aeroo/aeroo_docs.git /opt/aeroo/aeroo_docs
 WORKDIR /opt/aeroo/aeroolib
 RUN python setup.py install
+USER odoo
